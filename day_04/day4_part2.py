@@ -22,7 +22,7 @@ def main():
 
 
 def determine_overlap(ranges):
-    """ Determine if one fully contained within the other.
+    """ Determine if one partially contained within the other.
 
     :rtype: bool
     :param ranges: Pair of ranges to be checked
