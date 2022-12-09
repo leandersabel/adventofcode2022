@@ -1,6 +1,6 @@
 """"--- --- Day 6: Tuning Trouble ---
 --- Part Two ---
-https://adventofcode.com/2022/day/5
+https://adventofcode.com/2022/day/6
 """
 
 

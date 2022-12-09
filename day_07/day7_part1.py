@@ -1,6 +1,6 @@
 """"--- Day 7: No Space Left On Device ---
 --- Part One ---
-https://adventofcode.com/2022/day/5
+https://adventofcode.com/2022/day/7
 """
 
 
