@@ -178,7 +178,7 @@ class Tree:
     def __str__(self):
         # return str(self.height) + '-' + str(self.__visible) + ' ' # debug for part 1
         return '[' + str(self.x) + ', ' + str(self.y) + '] ' + 'h:' + str(self.height) + ' s:' \
-            + str(self.compute_scenic_score()) + ' ' #  + str(self.visible_trees)  # debug for day 2
+            + str(self.compute_scenic_score()) + ' '  # + str(self.visible_trees)  # debug for day 2
 
     def add_visible_tree(self, tree, direction):
         self.visible_trees[direction.value].append(tree)
@@ -197,6 +197,7 @@ class Tree:
     def compute_scenic_score(self):
         return len(self.visible_trees[0]) * len(self.visible_trees[1]) * \
             len(self.visible_trees[2]) * len(self.visible_trees[3])
+
 
 class Direction(Enum):
     NORTH = 0
