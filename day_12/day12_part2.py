@@ -4,8 +4,9 @@ https://adventofcode.com/2022/day/12
 """
 import string
 import sys
+import day12_part1
 
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(2000)
 
 
 def main():
@@ -17,19 +18,7 @@ def main():
         end = hmap[20][91]
         end.backtrack(0)
 
-        # Print the map with a [ ] around the end field
-        for row in hmap:
-            s = ""
-            for col in row:
-                if col.depth != sys.maxsize:
-                    if col.end:
-                        s += '['
-                    s += ' ' + str(col.depth) + ' '
-                    if col.end:
-                        s += ']'
-                else:
-                    s += ' ' + str(col.height) + ' '
-            print(s)
+        day12_part1.print_map(hmap)
 
         # Now find the closest a
         min_dist_a = sys.maxsize
@@ -89,9 +78,7 @@ class Node:
         self.height = height
         self.x = x
         self.y = y
-        self.path = None
         self.accessible_to_neighbours = []
-        self.explored_at_max_depth = -1
         self.depth = sys.maxsize
 
         if self.height == 'S':
